@@ -1,0 +1,26 @@
+
+<div *ngIf="loadNow">
+    <i class="fa fa-spinner fa-spin fa-3x"></i>
+</div>
+
+<div class="media">
+    <div class="media-left media-middle">
+        <a href="#">
+        <img class="media-object avatar" src="{{ user.avatar_url }}" />
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">@{{ user.login }}</h4>
+    </div>
+</div>
+
+<div class="media" *ngFor="#follower of followers">
+    <div class="media-left media-middle">
+        <a href="#">
+        <img class="media-object avatar" src="{{ follower.avatar_url }}" alt="...">
+        </a>
+    </div>
+    <div class="media-body">
+        <h4 class="media-heading">@{{ follower.login }}</h4>
+    </div>
+</div>
